@@ -1,0 +1,87 @@
+@import url(./base.css);
+
+.toerana-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.toerana-container  figure img {
+    width: 34em;
+    object-fit: cover;
+}
+
+.toerana-container  figure figcaption {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #343a40;
+    margin: 0.5rem 0;
+}
+
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+.toerana-container p:first-letter {
+    font-size: 4rem;
+    margin-left: 1em;
+}
+
+
+.vohipolo, .t-behasy {
+    margin-bottom: 4em;
+}
+.btn-group {
+    display: flex;
+    align-items: center;
+}
+
+
+.vohipolo .btn-group {
+    justify-content: flex-end;
+}
+
+.btn-group a {
+    padding: 1em 2em;
+    text-decoration: none;
+    font-size: 1.1em;
+    outline: 1px solid blue;
+    color: var(--cl-blue);
+    border-radius: 1px;
+    transition: outline 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+.btn-group a::first-letter {
+    text-transform: uppercase;
+}
+
+.btn-group a:hover {
+    padding: 1em 2em;
+    outline: 2px solid blue;
+    opacity: 0.6;
+    color: white;
+    background: var(--bg-blue);
+}
+
+
+
+@media (max-width: 900px) {
+    .toerana-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .toerana-container figure img {
+        width: 100%;
+    }
+
+    .btn-group  {
+        margin-bottom: 1em;
+    }
+}

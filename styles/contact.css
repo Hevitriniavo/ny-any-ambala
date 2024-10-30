@@ -1,0 +1,103 @@
+@import url(./base.css);
+
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+}
+
+.grid-form div {
+    width: 100%;
+}
+.contact-form legend {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.contact-form fieldset {
+    outline: none;
+    padding: 2em;
+    border: none;
+}
+
+.grid-form div label {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.grid-form div input, .grid-form div textarea, .grid-form div select {
+    width: 100%;
+    padding: 0.5em;
+    border-left:  var(--br-blue);
+    border-right: var(--br-blue);
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.grid-form div select {
+    border-bottom: 4px solid white;
+    border-top: 4px solid white;
+}
+
+.textarea {
+    grid-row: 2/4;
+}
+.grid-form div input:focus, .grid-form div textarea:focus, .grid-form div select:focus {
+    width: 100%;
+    outline: none;
+    border-bottom: var(--br-1-blue);
+    border-top: var(--br-1-blue);
+}
+
+legend {
+    font-size: 1.5em;
+    color: #474e47;
+    font-weight: bold;
+    padding: 0.5em;
+    text-align: center;
+    border-bottom: var(--br-1-gray);
+    border-radius: 5px;
+}
+.grid-form button {
+    padding: .6em 4em;
+    text-decoration: none;
+    font-size: 1.1em;
+    outline: 1px solid blue;
+    color: var(--cl-blue);
+    border-radius: 1px;
+    border: none;
+    transition: outline 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.grid-form button::first-letter {
+    text-transform: uppercase;
+}
+
+.grid-form button:hover {
+    outline: 2px solid blue;
+    opacity: 0.6;
+    color: white;
+    background: var(--bg-blue);
+}
+
+@media (max-width: 900px) {
+    .grid-form {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+    }
+
+    .grid-form div{
+        grid-column: auto;
+    }
+}

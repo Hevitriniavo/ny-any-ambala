@@ -1,0 +1,80 @@
+@import url(./base.css);
+
+.grid-valuable-desc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin: 1em auto;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #3A3A3A;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4A4A4A;
+    font-weight: 400;
+}
+
+
+.left {
+    grid-column: 1/2;
+}
+
+.right {
+    grid-column: 2/3;
+}
+
+.right figure img, .left figure img {
+        width: 100%;
+        height: auto;
+}
+
+.right figure, .left  figure{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    height: auto;
+}
+
+.grid-valuable-desc h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #2C3E50;
+}
+
+.grid-valuable-desc p, .summary p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4A4A4A;
+    margin-bottom: 0.5rem;
+}
+
+.grid-valuable-desc p:nth-child(1):first-letter {
+    font-size: 4rem;
+    margin-left: 1em;
+}
+
+.summary p:nth-child(2):first-letter {
+    font-size: 4rem;
+    margin-left: 1em;
+}
+
+@media (max-width: 900px) {
+    .grid-valuable-desc {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6em;
+    }
+
+    .left, .right {
+        grid-column: auto;
+    }
+}
